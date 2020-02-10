@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Mon Feb 10 14:17:22 CET 2020:
+Amorçage de Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019) : instance a816c00e-0170-2f3f-4da3-00000f370188 
+dans le répertoire de base de données D:\Users\macka.diallo\IdeaProjects\Ifp\db\ifp_db avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a
+Chargé de file:/D:/Program%20Files%20(x86)/DERBY/db-derby-10.15.1.3-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.2+8
+user.dir=D:\Users\macka.diallo\IdeaProjects\Ifp\db
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Chargeur de classe de la base de données démarré - derby.database.classpath = ''
+----------------------------------------------------------------
+Mon Feb 10 16:39:28 CET 2020 : fermeture du moteur Derby
+----------------------------------------------------------------
+Mon Feb 10 16:39:28 CET 2020:
+Fermeture de l'instance a816c00e-0170-2f3f-4da3-00000f370188 sur le répertoire de base de données D:\Users\macka.diallo\IdeaProjects\Ifp\db\ifp_db avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
