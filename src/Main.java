@@ -10,9 +10,13 @@ public class Main {
             //reporterDao.getReporterById(1);
             reporterDao.getReporter();*/
 
-        //2.1-Lecture d'une news
+
+        //2-Lecture d'une news  avec son reporter avec la liste de ces tags
         NewsDao newsDao = new NewsDao();
-        newsDao.getNews();
+        //newsDao.getNews();
+
+        //3-Ecriture d'une news avec gestion des id reporters ainsi que la liste des tags.
+        newsDao.setGetNews();
         }
 
 }
