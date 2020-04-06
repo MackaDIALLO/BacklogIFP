@@ -1,5 +1,7 @@
 package persistence;
 
+import services.ConnectionManager;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -8,7 +10,7 @@ import java.sql.Statement;
 
 public class NewsDao {
 
-    ConnectDao connectDao = new ConnectDao();
+    ConnectionManager connectDao = new ConnectionManager();
     ReporterDao reporterDao = new ReporterDao();
     //public void getNewsById (int id) {
     /**public void getNews () {
