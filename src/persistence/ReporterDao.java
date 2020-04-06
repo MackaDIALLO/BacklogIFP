@@ -13,7 +13,7 @@ public class ReporterDao {
         connectionManager = new ConnectionManager();
     }
 
-    public Reporter getReporterById (int id) {
+    public Reporter getReporterById(int id) throws SQLException {
 
         try {
             //1- lire la table reporter à partir de son id
@@ -33,31 +33,45 @@ public class ReporterDao {
             System.out.println("\n**********************************");
 
             //On affiche le nom des colonnes
-            for(int i = 1; i <= resultMeta.getColumnCount(); i++)
+            for (int i = 1; i <= resultMeta.getColumnCount(); i++)
                 System.out.print("\t" + resultMeta.getColumnName(i).toUpperCase() + "\t  *");
 
             System.out.println("\n**********************************");
 
-            while(reporterOut.next()){
+            while (reporterOut.next()) {
                 //System.out.println("\n");
-                for(int i = 1; i <= resultMeta.getColumnCount(); i++)
+                for (int i = 1; i <= resultMeta.getColumnCount(); i++)
                     System.out.print("\t" + reporterOut.getObject(i).toString() + "\t |");
 
                 System.out.println("\n---------------------------------");
 
             }
-            PreparedStatement preparedStatement1 = (PreparedStatement) connection.createStatement();
-            int reporterIn = preparedStatement.executeUpdate("INSERT INTO reporter (id, pseudo, credit) VALUES(?,?,?)");
-            reporterIn.setObject(4,"bobo", 5);
-            reporterIn.setObject(5,"bibi", 4);
-
             reporterOut.close();
             preparedStatement.close();
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getMessage());
 
         }
+        return null;
+    }
+
+    public Reporter setReporterById(int id) throws SQLException {
+
+        try {
+
+
+            Connection connection = connectionManager.getConnection();
+            PreparedStatement preparedStatement1 = (PreparedStatement) connection.createStatement();
+            int reporterIn = preparedStatement1.executeUpdate("INSERT INTO reporter (id, pseudo, credit) VALUES(?,?,?)");
+
+            //reporterIn.close();
+            preparedStatement1.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getMessage());
+        }
+        return null;
     }
 }

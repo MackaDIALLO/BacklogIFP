@@ -10,4 +10,9 @@ os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
-Chargeur de classe de la base de données démarré - derby.database.classpath = ''
+Chargeur de classe de la base de données démarré - derby.database.classpath----------------------------------------------------------------
+Mon Apr 06 19:06:43 CEST 2020 : fermeture du moteur Derby
+----------------------------------------------------------------
+Mon Apr 06 19:06:43 CEST 2020:
+Fermeture de l'instance a816c00e-0171-4f45-5f56-00000f36f9a8 sur le répertoire de base de données D:\Users\macka.diallo\IdeaProjects\Ifp\db\ifp_db avec le chargeur de classe jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------

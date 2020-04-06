@@ -18,10 +18,10 @@ public class ConnectionManager {
             return connection;
 
         } catch (Exception e) {
-            e.printStackTrace();
-            //System.exit(-1);
-            //System.err.println("Got an exception! ");
-            System.err.println(e.getMessage());
+                e.printStackTrace();
+                //System.exit(-1);
+                //System.err.println("Got an exception! ");
+                System.err.println(e.getMessage());
 
         } finally {
             if (connection != null)

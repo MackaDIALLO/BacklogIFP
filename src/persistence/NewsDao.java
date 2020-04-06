@@ -8,10 +8,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
 
-public class NewsDao {
+/**public class NewsDao {
 
-    ConnectionManager connectDao = new ConnectionManager();
-    ReporterDao reporterDao = new ReporterDao();
+   /** ConnectionManager connectDao = new ConnectionManager();
+   /** ReporterDao reporterDao = new ReporterDao();
     //public void getNewsById (int id) {
     /**public void getNews () {
 
@@ -55,13 +55,13 @@ public class NewsDao {
     }*/
     //3- Ecriture d'une news avec gestion des id reporters ainsi que la liste des tags.
     //public void getNews () {}
-    public void setGetNews () {
+   /** public void setGetNews () {
 
         try {
             //2- lire la table news avec son reporter avec la liste de ces tags
 
             //Création d'un objet Statement
-            Connection conn = connectDao.getConnectDB();
+          /*-------  Connection conn = connectDao.getConnectDB();
             Statement statement = conn.createStatement();
 
 
@@ -74,7 +74,7 @@ public class NewsDao {
             //L'objet ResultSet contient le résultat de la requête SQL
             //ResultSet result = statement.executeQuery("SELECT * FROM reporter where id =" +id);
             //ResultSet result = statement.executeQuery("SELECT pseudo,titre,contenu, date FROM reporter, news WHERE reporter.id = news.idreporter");
-            ResultSet result = statement.executeQuery("SELECT reporter.pseudo, tag.nametag, news.titre, news.contenu, news.date FROM ((news  JOIN reporter ON reporter.id = news.idreporter) JOIN tag ON news.id = tag.id)");
+            /*--ResultSet result = statement.executeQuery("SELECT reporter.pseudo, tag.nametag, news.titre, news.contenu, news.date FROM ((news  JOIN reporter ON reporter.id = news.idreporter) JOIN tag ON news.id = tag.id)");
             //On récupère les MetaData
             ResultSetMetaData resultMeta = result.getMetaData();
 
@@ -104,5 +104,5 @@ public class NewsDao {
 
         }
     }
-}
+}*/
 
