@@ -1,5 +1,7 @@
 package persistence;
 
+import services.ConnectionManager;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -8,7 +10,7 @@ import java.sql.Statement;
 
 public class NewsDao {
 
-    ConnectDao connectDao = new ConnectDao();
+    ConnectionManager connectionManager = new ConnectionManager();
     ReporterDao reporterDao = new ReporterDao();
     //public void getNewsById (int id) {
     /**public void getNews () {
@@ -59,7 +61,7 @@ public class NewsDao {
             //2- lire la table news avec son reporter avec la liste de ces tags
 
             //Création d'un objet Statement
-            Connection conn = connectDao.getConnectDB();
+            Connection conn = connectionManager.getConnection();
             Statement statement = conn.createStatement();
 
 
